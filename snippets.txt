@@ -1,0 +1,9 @@
+appc new
+
+cd new-project
+appc install connector/appc.arrowdb
+appc install connector/appc.mysql
+appc run --port=8088
+
+appc cloud domain --set api.mydomain.com
+appc publish
