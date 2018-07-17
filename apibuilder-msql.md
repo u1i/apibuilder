@@ -62,4 +62,4 @@ The model and API endpoints for your MySQL database table should automatically s
 
 
 
-(https://github.com/Axway/api-builder-standalone-tech-enablement)[Tech Enablement]
+[Tech Enablement](https://github.com/Axway/api-builder-standalone-tech-enablement)
