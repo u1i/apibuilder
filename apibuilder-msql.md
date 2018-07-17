@@ -1,13 +1,13 @@
 Run API Builder with MySQL on your machine without the nodejs dependency mess. Thanks to the Docker magic!
 
 
-1 - Run MySQL on your local machine
+## 1 - Run MySQL on your local machine
 
 docker run --rm --name mysql-$RANDOM -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql
 
 
 
-2 - Create DB table and data
+## 2 - Create DB table and data
 
 Just connect to the database using your favorite method. You could as well exec into the running mysql container using this command:
 
@@ -19,13 +19,13 @@ mysql -u root -paxway
 
 
 
-3 - Run preconfigured API Builder 4.0 standalone docker container
+## 3 - Run preconfigured API Builder 4.0 standalone docker container
 
 docker run -it -p 8080:8080 u1ih/apibuilder-standalone bash
 
 
 
-4 - Install MySQL Connector
+## 4 - Install MySQL Connector
 
 
 
@@ -33,7 +33,7 @@ npm install @axway/api-builder-plugin-dc-mysql
 
 
 
-5 - Edit the mysl connector config 
+## 5 - Edit the mysl connector config 
 
 
 
@@ -49,7 +49,7 @@ modelAutogen: true
 
 
 
-6 - Start API Builder
+## 6 - Start API Builder
 
 
 
