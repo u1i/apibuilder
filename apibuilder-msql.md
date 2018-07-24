@@ -52,6 +52,7 @@ modelAutogen: true
 ## 6 - Start API Builder
 
 
+cd /root/myproject
 
 npm start
 
