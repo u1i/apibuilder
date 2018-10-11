@@ -17,7 +17,7 @@ and then connect to the database like this:
 
 mysql -u root -paxway
 
-UPDATE: you need to change the authentication mechanism in order for API Builder to work:
+UPDATE: you need to change the MySQL authentication mechanism in order for API Builder to work:
 
 `ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'axway';`
 
