@@ -12,59 +12,54 @@ You need these things on your Windows/Mac/Linux:
 
 ## 1 - Run MySQL on your local machine
 
-`docker run --rm --name mysql-$RANDOM -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql:5.7.24`
+`docker run --rm --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql:5.7.24`
 
 
 ## 2 - Create DB table and data
 
-Run phpMyAdmin to create a database and a table:
+Create a 'test' in MySQL, for this you can exec into the running container like this:
 
-`docker run --rm --name myadmin-$RANDOM -d -e MYSQL_ROOT_PASSWORD=axway -e PMA_HOST=172.17.0.1 -p 8087:80 phpmyadmin/phpmyadmin`
+`docker exec -it mysql-test mysql -u root -paxway`
 
-The GUI is now available at http://localhost:8087/index.php
+when you see the 'mysql>' prompt, type the following:
 
-Alternatively, exec into the running mysql container using this command:
+`create database test;`   
+`use test;`   
+`CREATE TABLE test.customer(customer_name VARCHAR(20) NOT NULL , customer_email VARCHAR(20) NOT NULL);`
 
-`docker exec -it a059e9dd9bd2 bash`
+Alternatively, you could run phpMyAdmin and create databases and tables using a GUI:
 
-and then connect to the database like this:
+Run phpMyAdmin to create a database called 'test' and a database table:
 
-`mysql -u root -paxway`
+Login with root/axway at http://localhost:8087/index.php
 
 ## 3 - Install API Builder and Create a Project
 
-`npm install -g @axway/api-builder`
+Open your Terminal (or Command Prompt) and go to your working directory (e.g. $HOME/projects), then do install API Builder like this:
+
+`npm install -g @axway/api-builder`  
+`api-builder init myproject`
+
+Issue the commands that API Builder recommends:
+
+`cd myproject333`   
+`npm install --no-optional`   
+`npm start`
 
 ## 4 - Install MySQL Connector
 
-
 npm install @axway/api-builder-plugin-dc-mysql
 
-## 5 - Edit the mysl connector config 
-
-vi conf/mysql.default.js (or emacs or whatever you use)
+The configuration file 	for the connector is located in `conf/conf/mysql.default.js` - open it in a text editor and set `modelAutogen: true`. You will see that API Builder will attempt to connect to MySQL at port 3306 on localhost, using the 'test' database we've created earlier.
 
 
-enter correct host (docker host IP or mysql IP), user root, password axway, and the database name you created
+## 5 - Start API Builder
 
-
-
-modelAutogen: true
-
-
-
-## 6 - Start API Builder
-
-
-cd /root/myproject
-
-npm start
-
-
+`npm start`
 
 The model and API endpoints for your MySQL database table should automatically show up in Builder when you open http://localhost:8080/console/project/apidocs 
 
-
+![](builder-cust1.png)
 
 
 [Tech Enablement](https://github.com/Axway/api-builder-standalone-tech-enablement)
