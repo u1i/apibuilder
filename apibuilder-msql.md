@@ -59,11 +59,11 @@ The configuration file 	for the connector is located in `conf/conf/mysql.default
 
 Set environment variables for the MySQL connection:
 
-On Mac/Linux:
-`export MYSQL_USER=root`   
+On Mac/Linux:   
+`export MYSQL_USER=root`      
 `export MYSQL_PASSWORD=axway`
 
-On Windows:
+On Windows:   
 `set MYSQL_USER=root`   
 `set MYSQL_PASSWORD=axway`
 
