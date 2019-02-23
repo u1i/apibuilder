@@ -1,25 +1,39 @@
-Run API Builder with MySQL on your machine without the nodejs dependency mess. Thanks to the Docker magic!
+# API Builder & MySQL Quick Start
 
+Creating a CRUD interface for MySQL tables – with API Builder and without coding!
+
+You need these things on your Windows/Mac/Linux:
+
+* Docker
+* NodeJS
+* Web Browser
+* Terminal / Command Prompt
+* Text Editor (e.g. Atom)
 
 ## 1 - Run MySQL on your local machine
 
-docker run --rm --name mysql-$RANDOM -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql:5.7.24
-
+`docker run --rm --name mysql-$RANDOM -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql:5.7.24`
 
 
 ## 2 - Create DB table and data
 
-Just connect to the database using your favorite method. You could as well exec into the running mysql container using this command:
+Run phpMyAdmin to create a database and a table:
 
-docker exec -it a059e9dd9bd2 bash
+`docker run --rm --name myadmin-$RANDOM -d -e MYSQL_ROOT_PASSWORD=axway -e PMA_HOST=172.17.0.1 -p 8087:80 phpmyadmin/phpmyadmin`
+
+The GUI is now available at http://localhost:8087/index.php
+
+Alternatively, exec into the running mysql container using this command:
+
+`docker exec -it a059e9dd9bd2 bash`
 
 and then connect to the database like this:
 
-mysql -u root -paxway
+`mysql -u root -paxway`
 
-## 3 - Run preconfigured API Builder 4.0 standalone docker container
+## 3 - Install API Builder and Create a Project
 
-docker run -it -p 8080:8080 u1ih/apibuilder-standalone bash
+`npm install -g @axway/api-builder`
 
 ## 4 - Install MySQL Connector
 
