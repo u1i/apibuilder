@@ -44,7 +44,7 @@ Open your Terminal (or Command Prompt) and go to your working directory (e.g. $H
 
 Issue the commands that API Builder recommends:
 
-`cd myproject333`   
+`cd myproject`   
 `npm install --no-optional`   
 `npm start`
 
