@@ -73,6 +73,3 @@ And then start API Builder:
 The model and API endpoints for your MySQL database table should automatically show up in Builder when you open http://localhost:8080/console/project/apidocs
 
 ![](builder-cust1.png)
-
-
-[Tech Enablement](https://github.com/Axway/api-builder-standalone-tech-enablement)
