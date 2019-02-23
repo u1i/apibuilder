@@ -55,6 +55,17 @@ The configuration file 	for the connector is located in `conf/conf/mysql.default
 
 ## 5 - Start API Builder
 
+Set environment variables for the MySQL connection:
+
+On Mac/Linux:
+`export MYSQL_USER=root`   
+`export MYSQL_PASSWORD=axway`
+
+On Windows:
+`set MYSQL_USER=root`   
+`set MYSQL_PASSWORD=axway`
+
+And then start API Builder:
 `npm start`
 
 The model and API endpoints for your MySQL database table should automatically show up in Builder when you open http://localhost:8080/console/project/apidocs 
