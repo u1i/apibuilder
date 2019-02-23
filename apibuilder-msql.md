@@ -31,7 +31,7 @@ when you see the 'mysql>' prompt, type the following:
 
 Alternatively, you could run phpMyAdmin and create databases and tables using a GUI:
 
-Run phpMyAdmin to create a database called 'test' and a database table:
+`docker run --rm --name myadmin-$RANDOM -d -e MYSQL_ROOT_PASSWORD=axway -e PMA_HOST=172.17.0.1 -p 8087:80 phpmyadmin/phpmyadmin`
 
 Login with root/axway at http://localhost:8087/index.php
 
