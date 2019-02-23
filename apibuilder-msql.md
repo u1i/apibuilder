@@ -2,6 +2,8 @@
 
 Creating a CRUD interface for MySQL tables – with API Builder and without coding!
 
+![](buildermysql1.png)
+
 You need these things on your Windows/Mac/Linux:
 
 * Docker
