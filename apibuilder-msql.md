@@ -4,10 +4,10 @@ Creating a CRUD interface for MySQL tables – with API Builder and without codi
 
 ![](buildermysql1.png)
 
-You need these things on your Windows/Mac/Linux:
+You need these things on your Windows/Mac/Linux to do this exercise:
 
-* Docker
-* NodeJS
+* [Docker](https://docs.docker.com/install/)
+* [NodeJS](https://nodejs.org/en/download/)
 * Web Browser
 * Terminal / Command Prompt
 * Text Editor (e.g. Atom)
@@ -70,7 +70,7 @@ On Windows:
 And then start API Builder:
 `npm start`
 
-The model and API endpoints for your MySQL database table should automatically show up in Builder when you open http://localhost:8080/console/project/apidocs 
+The model and API endpoints for your MySQL database table should automatically show up in Builder when you open http://localhost:8080/console/project/apidocs
 
 ![](builder-cust1.png)
 
