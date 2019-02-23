@@ -17,9 +17,9 @@ You need these things on your Windows/Mac/Linux to do this exercise:
 `docker run --rm --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=axway -d mysql:5.7.24`
 
 
-## 2 - Create DB table and data
+## 2 - Create MySQL Database and Table
 
-Create a 'test' in MySQL, for this you can exec into the running container like this:
+Connect to MySQL, create a 'test' database and a 'customer' table with two fields. For this you can exec into the running container like this:
 
 `docker exec -it mysql-test mysql -u root -paxway`
 
