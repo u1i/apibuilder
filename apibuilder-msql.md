@@ -37,7 +37,7 @@ Login with root/axway at http://localhost:8087/index.php
 
 ## 3 - Install API Builder and Create a Project
 
-Open your Terminal (or Command Prompt) and go to your working directory (e.g. $HOME/projects), then do install API Builder like this:
+Open your Terminal (or Command Prompt) and go to your working directory (e.g. $HOME/projects), then install API Builder like this:
 
 `npm install -g @axway/api-builder`  
 `api-builder init myproject`
