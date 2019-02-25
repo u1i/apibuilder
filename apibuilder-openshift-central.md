@@ -151,20 +151,20 @@ API Central will tell you to deploy the new revision (basically, the new API you
 
 ![](./resources/apic6.png)
 
-Now you should be able to access the API endpoints from API Central and manipulate data in the browser:
+Now you can access the API endpoints from API Central and manipulate data in the browser:
 
 ![](./resources/apic7.png)
 
-In the individual requests you should also see the respective cURL commands for each method:
+In the individual requests you will see the respective cURL commands for each method:
 
 ![](./resources/apic8.png)
 
-If you like, you could go to the[ API Observer](https://apicentral.axway.com/api-observer/usage
+Go to the[ API Observer](https://apicentral.axway.com/api-observer/usage
 ) tab and inspect the requests you've made so far:
 
 ![](./resources/apic9.png)
 
-Let's As a final step, let's protect the API endpoints. We'll require our consumers to use API Keys for authentication. In the 'Products' API Proxy, click on the 'Policies' tab and change the client authentication accordingly:
+As a final step, let's protect the API endpoints. We'll require our consumers to use API Keys for authentication. In the 'Products' API Proxy, click on the 'Policies' tab and change the client authentication accordingly:
 
 ![](./resources/apic10.png)
 
