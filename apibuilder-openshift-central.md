@@ -127,3 +127,50 @@ If everything worked out, you should be able to click on the link and see the Ax
 
 ![](./resources/swagger1.png)
 
+Save that URL, we will need it for the next step.
+
+## 6 - Protect & Consume with API Central
+
+Log in into [API Central](https://apicentral.axway.com) and click on 'Register an API' 
+
+![](./resources/apic1.png)
+
+Paste the Swagger URL into the new dialog:
+
+![](./resources/apic2.png)
+
+Set the API name to 'Products', change the Base path to '/products/ and add a description:
+
+![](./resources/apic4.png)
+
+Click 'Save'. Once the API was successfully registered, you can proceed to 'Test and configure your proxy'. The Products API should now be visible:
+
+![](./resources/apic5.png)
+
+API Central will tell you to deploy the new revision (basically, the new API you've just imported), so let's just do that. Click on 'Deployments' and 'Deploy revision 1' as a Test Runtime.
+
+![](./resources/apic6.png)
+
+Now you should be able to access the API endpoints from API Central and manipulate data in the browser:
+
+![](./resources/apic7.png)
+
+In the individual requests you should also see the respective cURL commands for each method:
+
+![](./resources/apic8.png)
+
+If you like, you could go to the[ API Observer](https://apicentral.axway.com/api-observer/usage
+) tab and inspect the requests you've made so far:
+
+![](./resources/apic9.png)
+
+Let's As a final step, let's protect the API endpoints. We'll require our consumers to use API Keys for authentication. In the 'Products' API Proxy, click on the 'Policies' tab and change the client authentication accordingly:
+
+![](./resources/apic10.png)
+
+Repeat the deployment step (Deployents -> Deploy Revision 2). When you go back to the Test Methods, API Central will tell you that now you have to create an App with API Keys in order to access the endpoints:
+
+![](./resources/apic11.png)
+
+Click on 'View your apps', create a new app and add authentication and APIs:
+
