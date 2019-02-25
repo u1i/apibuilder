@@ -1,7 +1,7 @@
 # Axway API Builder
 
 
-[Build, Deploy & Control a Microservice with API Builder and API Central](apibuilder-openshift-central.md)   
+[Build, Deploy & Control an API with API Builder and API Central](apibuilder-openshift-central.md)   
 [API Builder & MySQL](apibuilder-msql.md)
 
 --
