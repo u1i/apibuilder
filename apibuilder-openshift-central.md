@@ -175,3 +175,7 @@ Repeat the deployment step (Deployents -> Deploy Revision 2). When you go back t
 Click on 'View your apps', create a new app and add authentication and APIs:
 
 ![](./resources/apic12.png)
+
+After that, you can make authenticated requests to the API endpoints using API Keys:
+
+![](./resources/apic13.png)
