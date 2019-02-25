@@ -182,6 +182,6 @@ After that, you can make authenticated requests to the API endpoints using API K
 
 ## 7 - Recap
 
-Let's look back at what you have accomplished in this exercise. You've played with API Builder and saw how easy it is to create a data model & API endpoints, no coding needed. Docker helped packaging it up as a container image, which you've pushed to Docker Hub, the global container registry. From there it took you just a few steps to deploy this on OpenShift. You've then imported the API in API Central in order to protect it, add governance, authentication & analytics capabilities.
+Let's look back at what you have accomplished in this exercise. You've played with API Builder and saw how easy it is to create a data model & API endpoints, without having to write a single line of code. Docker helped packaging it up as a container image, which you've pushed to Docker Hub, the global container registry. From there it took you just a few steps to deploy this on OpenShift. You've then imported the API in API Central in order to protect it, add governance, authentication & analytics capabilities.
 
 This concludes the lab. Your comments and suggestions will help to improve it. Please [create an issue](https://github.com/u1i/apibuilder/issues/new) if you encounter roadblocks!
