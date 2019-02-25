@@ -2,7 +2,7 @@
 
 In this exercise you're going to build a microservice, push it on OpenShift and manage it with API Central.
 
-![](osc1.png)
+![](osc2.png)
 
 You need these things to do this exercise:
 
