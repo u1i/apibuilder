@@ -52,7 +52,7 @@ Issue the commands that API Builder recommends:
 
 npm install @axway/api-builder-plugin-dc-mysql
 
-The configuration file 	for the connector is located in `conf/conf/mysql.default.js` - open it in a text editor and set `modelAutogen: true`. You will see that API Builder will attempt to connect to MySQL at port 3306 on localhost, using the 'test' database we've created earlier.
+The configuration file 	for the connector is located in `./conf/mysql.default.js` - open it in a text editor and set `modelAutogen: true`. You will see that API Builder will attempt to connect to MySQL at port 3306 on localhost, using the 'test' database we've created earlier.
 
 
 ## 5 - Start API Builder
