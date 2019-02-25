@@ -56,7 +56,7 @@ Enter 'products' as the name for the model, add a description if you like and cl
 * Field name: product_name (type 'String', click 'Required' -> 'Add field to model)
 * Field name: product_price (type 'String', click 'Required' -> 'Add field to model)
 
-Connector: by default, data is stored in memory. You could install connectors to access & permanently store data in MySQL, Oracle or MongoDB.
+Connector: by default, data is stored in memory. You could install connectors to access & permanently store data in MySQL, Oracle or MongoDB. We might cover that in another exercise.
 
 Click 'Next', where API Builder will create API endpoints for your model: 
 
@@ -82,5 +82,48 @@ API Builder will show you the corresponding cURL command which you could try on 
 
 [http://localhost:8080/apidoc/swagger.json?apis/products](ttp://localhost:8080/apidoc/swagger.json?apis/products)
 
+Import it into [Postman](https://www.getpostman.com/), if you like!
 
-http://products-uli.1d35.starter-us-east-1.openshiftapps.com/apidoc/swagger.json?apis/products
+## 4 - Create Docker Image
+
+You may have seen that the folder for your API Builder project 'myproject' contains a Dockerfile - that's all we need to bake an image!
+
+But before we do that, let's quickly remove the authentication for this API. We'll be adding that again at a later step. On the command line, stop API Builder (Control-C), then open the file conf/default.js and change access control from 'basic' to 'none':
+
+![](./resources/auth1.png)
+
+Now we're ready to create the container image. What's your Docker ID? Let's assume it's patrickd, so the commands should look like this:
+
+`docker login` (enter your Docker ID and password)
+`docker build . -t patrickd/products:1`
+
+Assuming this is successful, you can now push the container image to Docker Hub:
+
+`docker push patrickd/products:1`
+
+The image will be public, and you should see it when you open [Docker Hub](https://hub.docker.com): 
+
+![](./resources/dh1.png)
+
+## 5 - Deploy on OpenShift
+
+Create a free account for OpenShift and create a project, use a short name wuthout spaces in it. The rest we'll do on the command line, make sure you set up the [oc tool](https://github.com/CCI-MOC/moc-public/wiki/Installing-the-oc-CLI-tool-of-OpenShift).
+
+In the OpenShift web gui, click 'Copy Login Command' (in the top right menu), and paste that into the terminal. This will allow you to access your Openhift project from the command line with 'oc':
+
+![](./resources/oclogin1.png)
+
+From there it's pretty easy to deploy your new container image on OpenShift, using the command line:
+
+`oc new-app patrickd/products:1`   
+`oc expose dc/hello`   
+`oc expose svc/hello`   
+
+The first line creates a new app, and tells OpenShift to use a specific container image, the other two create routes so it's accessible to the outside world. Go back to the OpenShift GUI, you should see the new app:
+
+![](./resources/oslive1.png)
+
+If everything worked out, you should be able to click on the link and see the Axway logo. For security reasons, the deployed version does not give you a GUI. But simply add /apidoc/swagger.json?apis/products to the URL and you'll get Swagger document for the API endpoints:
+
+![](./resources/swagger1.png)
+
