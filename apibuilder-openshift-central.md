@@ -94,7 +94,7 @@ But before we do that, let's quickly remove the authentication for this API. We'
 
 Now we're ready to create the container image. What's your Docker ID? Let's assume it's patrickd, so the commands should look like this:
 
-`docker login` (enter your Docker ID and password)
+`docker login` (enter your Docker ID and password)   
 `docker build . -t patrickd/products:1`
 
 Assuming this is successful, you can now push the container image to Docker Hub:
