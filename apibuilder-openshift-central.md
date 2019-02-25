@@ -107,7 +107,7 @@ The image will be public, and you should see it when you open [Docker Hub](https
 
 ## 5 - Deploy on OpenShift
 
-Create a free account for OpenShift and create a project, use a short name wuthout spaces in it. The rest we'll do on the command line, make sure you set up the [oc tool](https://github.com/CCI-MOC/moc-public/wiki/Installing-the-oc-CLI-tool-of-OpenShift).
+Create a free account for OpenShift and create a project, use a short name without spaces in it. The rest we'll do on the command line, make sure you set up the [oc tool](https://github.com/CCI-MOC/moc-public/wiki/Installing-the-oc-CLI-tool-of-OpenShift).
 
 In the OpenShift web gui, click 'Copy Login Command' (in the top right menu), and paste that into the terminal. This will allow you to access your Openhift project from the command line with 'oc':
 
