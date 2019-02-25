@@ -39,7 +39,7 @@ Open your Terminal (or Command Prompt) and go to your working directory (e.g. $H
 `npm install -g @axway/api-builder`  
 `api-builder init myproject`
 
-Issue the commands that API Builder recommends:
+Issue the commands that API Builder recommends (plus a temporary fix for a dependency issue):
 
 `cd myproject`   
 `npm install -save-dev highlight.js@9.14.2`   
