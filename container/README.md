@@ -14,3 +14,5 @@ Then inside the container:
 
 `cd myproject`   
 `npm start`
+
+--> open http://localhost:8080/console
