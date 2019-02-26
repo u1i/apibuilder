@@ -117,8 +117,8 @@ In the OpenShift web gui, click 'Copy Login Command' (in the top right menu), an
 From there it's pretty easy to deploy your new container image on OpenShift, using the command line:
 
 `oc new-app patrickd/products:1`   
-`oc expose dc/hello`   
-`oc expose svc/hello`   
+`oc expose dc/products`   
+`oc expose svc/products`   
 
 The first line creates a new app, and tells OpenShift to use a specific container image, the other two create routes so it's accessible to the outside world. Go back to the OpenShift GUI, you should see the new app:
 
