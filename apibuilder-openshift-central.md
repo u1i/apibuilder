@@ -124,7 +124,7 @@ The first line creates a new app, and tells OpenShift to use a specific containe
 
 ![](./resources/oslive1.png)
 
-If everything worked out, you should be able to click on the link and see the Axway logo. For security reasons, the deployed version does not give you a GUI. But simply add /apidoc/swagger.json?apis/products to the URL and you'll get Swagger document for the API endpoints:
+If everything worked out, you should be able to click on the link and see the Axway logo. For security reasons, the deployed version does not give you a GUI. But simply add /apidoc/swagger.json?apis/products to the URL and you'll get the Swagger document for the API endpoints:
 
 ![](./resources/swagger1.png)
 
