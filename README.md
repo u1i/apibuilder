@@ -1,5 +1,10 @@
 # Axway API Builder
 
+## Containerized Version
+
+Eliminates the need to setup NodeJS on your machine, also gives you a complete offline version (and a fallback in case dependencies break):
+
+[API Builder Docker Image](https://github.com/u1i/apibuilder/blob/master/container/README.md)
 
 ## Labs
 * [Build, Deploy & Control an API with API Builder and API Central](apibuilder-openshift-central.md)   
