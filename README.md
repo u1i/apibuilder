@@ -7,7 +7,7 @@ Eliminates the need to setup NodeJS on your machine, also gives you a complete o
 [API Builder Docker Image](https://github.com/u1i/apibuilder/blob/master/container/README.md)
 
 ## Labs
-* [Build, Deploy & Control an API with API Builder and API Central](apibuilder-openshift-central.md)   
+* [Build, Deploy & Control an API with API Builder, OpenShift, and API Central](apibuilder-openshift-central.md)   
 * [Create a CRUD interface for MySQL tables](apibuilder-msql.md)
 
 --
